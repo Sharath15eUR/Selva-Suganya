@@ -1,1 +1,29 @@
 The equivalent pointer expression for arr[i][j][k][2] is given by *(*(*(*(arr+i)+j)+k)+2)
+
+
+Example code:
+
+
+#include <stdio.h>
+
+int main(){
+    int arr[10][10][10][10];                                                   
+    int i,j,k,l;                                                               
+    for(i=0;i<=3;i++){                                                         
+        for(j=0;j<=3;j++){                                                     
+            for(k=0;k<=3;k++){
+                for(l=0;l<=3;l++){
+                    scanf("%d %d %d %d",&arr[i],&arr[j], &arr[k], &arr[l]);
+                }
+            }
+        }
+    }
+
+i=1;
+j=2;
+k=3;
+
+printf("The equivalent pointer expression for arr[i][j][k][2] is given as %d", *(*(*(*(arr+i)+j)+k)+2));
+
+return 0;
+}
