@@ -1,0 +1,19 @@
+
+#include <stdio.h>
+#include <stdint.h>
+
+int main(){
+    unsigned int var = 0x12345678;
+    unsigned int rev=0;
+    
+    for(int i=0;i<8;i++){
+        rev = (rev<<4) | ((var>>(4*i)) & 0xF);
+    }
+    
+    printf("%X",rev);
+    return 0;
+}
+
+
+The output is 87654321.
+The given program reverses the hex variable that is given.

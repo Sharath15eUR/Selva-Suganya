@@ -1,0 +1,29 @@
+#include <stdio.h>
+
+typedef struct
+{
+    char A;
+    double B;
+    char C;
+}infoData;
+
+int main(int argc, char* argv[])
+{
+    printf("\nSize of Structure = %d\n\n", sizeof(infoData));
+    return 0;
+}
+
+// \ \ \ \ \ \ \ \   \ \ \ \ \ \ \ \  \ \ \ \ \ \ \ \    \ \ \ \ \ \ \ \
+
+The output of the given code is
+
+Size of Structure = 24
+
+
+
+Explanantion:
+According to the concept of structure padding, the size of the given structure is 24.
+The first char variable occupies one word in the memory and the other 3 bytes of the word are padded.
+Similarly, the double variable( 8 bytes) occupies two words(4 bytes in one word * 2 = 8 bytes)
+The second char variable occupies another word in which the 3 other unoccupied bytes are padded.
+ 
