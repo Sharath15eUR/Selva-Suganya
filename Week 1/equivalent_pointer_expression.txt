@@ -13,7 +13,7 @@ int main(){
         for(j=0;j<=3;j++){                                                     
             for(k=0;k<=3;k++){
                 for(l=0;l<=3;l++){
-                    scanf("%d %d %d %d",&arr[i],&arr[j], &arr[k], &arr[l]);
+                    scanf("%d",&arr[i][j][k][l]);
                 }
             }
         }
