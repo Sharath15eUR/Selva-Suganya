@@ -7,7 +7,7 @@ int main() {
 
     // 1st Matrix
     
-    printf("Enter matrix 1");
+    printf("Enter matrix 1\n");
 
     for(int i=0;i<3;i++){
         for(int j=0;j<3;j++){
@@ -17,7 +17,7 @@ int main() {
 
     // 2nd matrix
     
-     printf("Enter matrix 2");
+     printf("Enter matrix 2\n");
 
     for(int i=0;i<3;i++){
         for(int j=0;j<3;j++){
@@ -34,13 +34,12 @@ int main() {
     // Resultant Matrix
 
     for(int i=0;i<3;i++){
-        *(*(r+i)+j1) = 0;
         for(j1=0;j1<3;j1++){
-             *(*(r+i)+j1) += *(*(p+i)+j1) * *(*(q+j1)+i);
+             *(*(r+i)+j1) = *(*(p+i)+j1) * *(*(q+i)+j1);
         }
         j1 = 0;
     }
-    printf("The resultant matrix is");
+    printf("The resultant matrix is\n");
     for(int i=0;i<3;i++){
         for(int j=0;j<3;j++){
             printf("%d\t",res[i][j]);
