@@ -1,0 +1,23 @@
+6. How to avoid Race conditions and deadlocks?
+
+-> using timeouts
+-> using critical section
+-> testing and debugging 
+-> avoiding the shared state
+
+7. What is the difference between exec and fork ?
+fork():
+->fork() is used to create a new process, known as the child process, which is a copy of the calling (parent) process.
+After a successful fork() two identical processes are created the parent process and the child process.
+but both shares the same code having different memory space.
+
+exec():
+->exec() is used to execute a new program in the current process space effectively replacing the current process's 
+memory image with the image of a new program.
+
+8. What is the difference between process and threads?
+
+-> Process: A process is an instance of a running program. 
+It consists of an executable program, its associated data, and the execution context needed for the program to run.
+
+-> Thread: it is the smallest unit of execution with in a process.
