@@ -1,0 +1,19 @@
+1.Explain the connection procedure followed in client server communication.
+
+The following is the procedure to create a client server communication:
+
+1. Socket is created on both the ends , socket is nothing but a file whose file descriptors are created based on the ip family , communication mode and protrocol followed.
+
+2. Once the socket is created it is labelled with the port number and Ip address.
+
+3. In case of TCP the connection is based on the request and response whereas in case of UDP, whenever the client needs it transmits similarly the server won't wait for the connection request it just accepts the datagram.
+
+
+2.What is the use of bind() function in socket programming  ? 
+
+The bind() function is used in binding the created socket file descriptor with the port address and the ip address.
+bind(created_fd,(struct sockaddr*)&server_details,sizeof(server_details))
+
+3.What is Datagram Socket ? 
+
+Socket that connects using UDP mode. In Datagram socket, no request or response mechanism provided whenever the client is with the datagram it transmits.
